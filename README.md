@@ -4,7 +4,7 @@ A production-style backend system that manages employee leave requests using a c
 
 This is not a CRUD demo. The goal of this project is to demonstrate how AI agents can orchestrate real business workflows end-to-end.
 
-What This Project Does
+🚀 What This Project Does
 
 An employee can:
 
@@ -26,7 +26,7 @@ Sends approval/denial emails
 
 Deducts leave only after approval
 
-Core Concepts Demonstrated
+🧠 Core Concepts Demonstrated
 1. Agentic AI Workflow (Think → Act → Observe)
 
 The LeaveManagementAgent uses an LLM (Gemini) to:
@@ -62,7 +62,7 @@ Triggers final agentic actions
 
 Notifies the employee automatically
 
-Tech Stack
+🧩 Tech Stack
 
 FastAPI – Backend API
 
@@ -76,7 +76,7 @@ Pydantic – Data validation
 
 In-memory databases – Mock HRIS + request tracking
 
-Project Structure
+📁 Project Structure
 app/
 ├── agent.py        # Agentic AI logic (Think → Act → Observe)
 ├── main.py         # FastAPI application & endpoints
@@ -84,22 +84,22 @@ app/
 ├── database.py     # Mock HRIS + request state DB
 ├── schemas.py      # Pydantic models
 🔌 API Endpoints
-1️Request Leave
+1️⃣ Request Leave
 POST /request-leave
 
 Creates a leave request and notifies the manager.
 
-2️Handle Approval
+2️⃣ Handle Approval
 GET /handle-approval?request_id=...&action=approve|deny
 
 Triggered via manager email links.
 
-3️Check Request Status
+3️⃣ Check Request Status
 GET /request-status/{request_id}
 
 Returns current request state.
 
-Environment Variables
+🔐 Environment Variables
 
 Create a .env file:
 
@@ -109,14 +109,14 @@ SENDER_PASSWORD=your_app_password
 
 Gmail requires App Passwords (not your actual password).
 
-Running the Project
+▶️ Running the Project
 pip install -r requirements.txt
 uvicorn app.main:app --reload
 
 Visit:
 
 http://127.0.0.1:8000/docs
-Why This Project Matters
+❗ Why This Project Matters
 
 Most AI projects stop at prompt engineering.
 
@@ -130,7 +130,7 @@ How to combine LLM reasoning with deterministic systems
 
 This is the kind of architecture used in real internal tools, not tutorials.
 
-Limitations (Intentional)
+🧪 Limitations (Intentional)
 
 In-memory DBs (easy to replace with PostgreSQL)
 
@@ -140,7 +140,7 @@ Single-service design
 
 These were skipped to focus on agentic workflow design.
 
-Future Improvements
+📌 Future Improvements
 
 Persistent database
 
@@ -152,6 +152,6 @@ UI dashboard
 
 Multi-agent coordination
 
-Author
+👤 Author
 
 Ujjawal Sanadhya
